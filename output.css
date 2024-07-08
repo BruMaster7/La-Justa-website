@@ -568,19 +568,29 @@ img {
   margin-right: 1.5rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .my-4 {
@@ -588,14 +598,14 @@ img {
   margin-bottom: 1rem;
 }
 
-.my-44 {
-  margin-top: 11rem;
-  margin-bottom: 11rem;
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+.my-9 {
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
 }
 
 .mb-2 {
@@ -606,24 +616,20 @@ img {
   margin-inline-end: 0.5rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
   display: flex;
 }
 
-.h-1 {
-  height: 0.25rem;
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-96 {
@@ -634,8 +640,12 @@ img {
   height: 100%;
 }
 
-.max-h-4 {
-  max-height: 1rem;
+.h-20 {
+  height: 5rem;
+}
+
+.h-24 {
+  height: 6rem;
 }
 
 .max-h-20 {
@@ -662,14 +672,28 @@ img {
   align-content: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .rounded-full {
@@ -799,6 +823,36 @@ img {
 .focus\:ring-green-300:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(134 239 172 / var(--tw-ring-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:mx-6 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .md\:mx-96 {
+    margin-left: 24rem;
+    margin-right: 24rem;
+  }
+
+  .md\:mx-52 {
+    margin-left: 13rem;
+    margin-right: 13rem;
+  }
+
+  .md\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
