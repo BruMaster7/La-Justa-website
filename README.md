@@ -1,12 +1,12 @@
 <h1 align="center">TO RUN THE FRONT OF "LA JUSTA"</h1>
 
 <p> -  Clone the respositorie to your device </p>
-<h4 align="center"> Open in a console the repositorie and: </h4>
+<h4 align="left"> Open in a console the repositorie and: </h4>
 <p> - Run in a console: npm install -D tailwindcss</p>
 <p> - Run in a console: npx tailwindcss init</p>
 <p> - Run npx tailwindcss -i ./src/input.css -o ./output.css --watch</p>
 
-<h3>LET'S RUN IN A LIVE SERVER AND LOOK</h3>
+<h3 align="left">LET'S RUN IN A LIVE SERVER AND LOOK</h3>
 
 
 
