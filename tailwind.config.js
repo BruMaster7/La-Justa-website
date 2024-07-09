@@ -19,6 +19,9 @@ module.exports = {
       backgroundImage: {
         'hero-bg': "url('/img/hero-image.png')",
         //'footer-texture': "url('/img/footer-texture.png')",
+      },
+      height: {
+        'h-hero': '450px'
       }
     },
   },
