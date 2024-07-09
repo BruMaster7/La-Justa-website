@@ -2,6 +2,7 @@
 module.exports = {
   content: ["./*.{html,js}"],
   theme: {
+    
     extend: {
       fontFamily: {
         "Merriweather": ['Merriweather', 'sans-serif']
@@ -14,7 +15,7 @@ module.exports = {
         "justa-red": "#f24f50",
         "justa-fontGrey": "#696969",
         "justa-orange": "#f99500",
-        "justa-violet": "#f99500",
+        "justa-violet": "#8c419f",
       },
       backgroundImage: {
         'hero-bg': "url('/img/hero-image.png')",
@@ -24,6 +25,22 @@ module.exports = {
         'h-hero': '450px'
       }
     },
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    }
   },
   plugins: [],
 }
