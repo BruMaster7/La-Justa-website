@@ -4,7 +4,7 @@
 <h4 align="left"> Open in a console the repositorie and: </h4>
 <p> - Run in a console: npm install -D tailwindcss</p>
 <p> - Run in a console: npx tailwindcss init</p>
-<p> - Run npx tailwindcss -i ./src/input.css -o ./output.css --watch</p>
+<p> - Run npx tailwindcss -i ./src/assets/css/input.css -o ./output.css --watch</p>
 
 <h3 align="left">LET'S RUN IN A LIVE SERVER AND LOOK</h3>
 
