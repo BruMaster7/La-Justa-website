@@ -2,7 +2,6 @@ import { fetchNews } from "./api/fetchNews.js";
 import { renderHero } from "./components/renderHero.js";
 import { renderNews } from "./components/renderNews.js";
 import { updatePagination, setCurrentPage,currentPage, totalPages } from "./utils/pagination.js";
-import { toggleMenu } from "./toggleMenu.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const prevButton = document.getElementById("prev-page");
