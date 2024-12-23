@@ -11,7 +11,7 @@ export const renderNews = (newsArray) => {
       <div class="new-container flex flex-col bg-white shadow my-5">
         <img src="${news.img}" alt="${news.header}" class="w-full h-auto">
         <div class="p-4">
-          <div>${renderCategories(news.category)}</div>
+          <div id="categories-container">${renderCategories(news.category)}</div>
           <h3 class="text-xl font-bold">${news.title}</h3>
           <p>${news.text}</p>
           <a href="${getLink(news.web)}" target="_blank">
