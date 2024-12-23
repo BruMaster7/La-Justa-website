@@ -6,7 +6,7 @@
       case "Xataka":
         return "/src/assets/img/xataka-logo.png";
       case "Montevideo Portal":
-        return "/src/assets/img/montevideo-portal-logo.png";
+        return "/src/assets/img/mportal-logo.png";
       default:
         return "/src/assets/img/logo.png";  // Logo por defecto
     }

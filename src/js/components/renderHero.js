@@ -1,4 +1,5 @@
 import { getLogo } from "../utils/getLogo.js";
+import {getLink} from "../utils/getLink.js"
 
 export const renderHero = (newsArray) => {
   const randomNews = newsArray[Math.floor(Math.random() * newsArray.length)];
@@ -18,8 +19,8 @@ export const renderHero = (newsArray) => {
         <div class="hero-new max-w-screen-md mt-5">
           <h3 class="text-4xl font-bold text-white">${randomNews.title}</h3>
           <p class="text-xl text-white mt-3">${randomNews.header || "Sin descripción."}</p>
-          <a href="${randomNews.web}" target="_blank">
-            <div class="portal-extracted flex mt-4">
+          <a href="${getLink(randomNews.web)}" target="_blank">
+            <div class="portal-extracted flex items-center mt-4">
               <img class="h-14 rounded-3xl" src="${getLogo(randomNews.web)}" alt="Logo ${randomNews.web}">
               <p class="ml-3 text-lg text-white">${randomNews.web}</p>
             </div>
