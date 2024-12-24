@@ -1,7 +1,9 @@
 import { fetchNews } from "./api/fetchNews.js";
 import { renderHero } from "./components/renderHero.js";
 import { renderNews } from "./components/renderNews.js";
-import { updatePagination, setCurrentPage,currentPage, totalPages } from "./utils/pagination.js";
+import { updatePagination, setCurrentPage, currentPage, totalPages } from "./utils/pagination.js";
+
+let currentCategory = null;
 
 document.addEventListener("DOMContentLoaded", () => {
   const prevButton = document.getElementById("prev-page");
@@ -10,17 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
   prevButton.addEventListener("click", () => changePage("prev"));
   nextButton.addEventListener("click", () => changePage("next"));
 
-  fetchNews(1, renderNews, renderHero, updatePagination);
+  fetchNews(currentPage, renderNews, renderHero, updatePagination, currentCategory);
 });
 
 const changePage = (direction) => {
-  if (direction === "next" && currentPage < totalPages) {
-    setCurrentPage(1);
-  } else if (direction === "prev" && currentPage > 1) {
-    setCurrentPage(-1);
-  }
-  fetchNews(currentPage, renderNews, renderHero, updatePagination);
+  fetchNews(currentPage, renderNews, renderHero, updatePagination, currentCategory);
 };
+
+
+
+
 
 
   

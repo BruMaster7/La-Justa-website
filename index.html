@@ -12,25 +12,58 @@
 </head>
 <body class="font-Merriweather bg-justa-white">
 
-    <header class="flex justify-between items-center p-4 bg-white shadow-md">
+    <header class="flex justify-between items-center p-4 bg-white shadow-md relative">
+        <!-- Logo -->
         <a href="../index.html" class="flex items-center">
-            <img class="h-16" src="/src/assets/img/logo-1Color.png" alt="logo-LaJusta">
-            <h1 class="font-black text-3xl text-justa-dark-blue ml-4">LA JUSTA</h1>
+          <img class="h-16" src="/src/assets/img/logo-1Color.png" alt="logo-LaJusta">
+          <h1 class="font-black text-3xl text-justa-dark-blue ml-4">LA JUSTA</h1>
         </a>
+      
         <!-- Hamburguesa para móviles -->
-        <button id="menu-button" class="block md:hidden text-justa-dark-blue focus:outline-none" onclick="toggleMenu()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+        <button id="menu-button" class="block md:hidden text-justa-dark-blue focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
+      
         <!-- Menú de navegación -->
-        <nav class="hidden md:flex space-x-8 font-semibold text-justa-dark-blue text-xl">
-            <a class="hover:text-gray-600" href="#">Salud</a>
-            <a class="hover:text-gray-600" href="#">Deportes</a>
-            <a class="hover:text-gray-600" href="#">Política</a>
-            <a class="hover:text-gray-600" href="#">Hoy</a>
+        <nav
+          id="nav-menu"
+          class="hidden md:flex md:flex-row md:items-center md:space-x-8 font-semibold text-justa-dark-blue text-xl absolute md:static top-0 left-0 w-full md:w-auto bg-white md:bg-transparent z-10 shadow md:shadow-none"
+        >
+          <!-- Botón de cierre para móviles -->
+          <button id="close-menu" class="self-end text-justa-dark-blue focus:outline-none m-4 hidden md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+      
+          <a class="hover:text-gray-600 p-4 md:p-0" href="#">Salud</a>
+          <a class="hover:text-gray-600 p-4 md:p-0" href="#">Deportes</a>
+          <a class="hover:text-gray-600 p-4 md:p-0" href="#">Política</a>
+          <a class="hover:text-gray-600 p-4 md:p-0" href="#">Hoy</a>
+      
+          <!-- Buscador -->
+          <div id="search-container" class="relative flex items-center w-full md:w-auto md:ml-4">
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Buscar noticias..."
+              class="hidden absolute right-0 md:static w-full md:w-64 py-2 px-4 border border-justa-grey rounded-full focus:outline-none focus:ring-2 focus:ring-justa-green text-justa-dark-blue"
+            />
+            <button id="search-button" class="text-justa-dark-blue focus:outline-none mx-auto md:mx-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19a8 8 0 100-16 8 8 0 000 16zM21 21l-4.35-4.35" />
+              </svg>
+            </button>
+          </div>
         </nav>
-    </header>
+      </header>
+      
+      
+      
+      
+      
     <!-- Menú desplegable móvil -->
     <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
         <ul class="flex flex-col space-y-4 p-4 text-justa-dark-blue font-semibold text-lg">
@@ -87,6 +120,7 @@
     <script type="module" src="/src/js/index.js"></script>
     <script type="module" src="/src/js/components/renderCategories.js"></script>
     <script src="/src/js/toggleMenu.js"></script>
+    <script src="/src/js/searchButton.js"></script>
     
 </body>
 </html>

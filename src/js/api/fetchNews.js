@@ -1,8 +1,9 @@
-import { setTotalPages, totalPages } from '../utils/pagination.js'
+import { setTotalPages, totalPages } from '../utils/pagination.js';
 
 export const fetchNews = async (page, renderNews, renderHero, updatePagination, category = '') => {
   try {
     const categoryParam = category ? `&category=${encodeURIComponent(category)}` : '';
+    
     const response = await fetch(`http://127.0.0.1:8000/news?page=${page}${categoryParam}`);
     const data = await response.json();
 
@@ -10,8 +11,14 @@ export const fetchNews = async (page, renderNews, renderHero, updatePagination, 
 
     renderNews(data.data);
     renderHero(data.data);
-    updatePagination(page, totalPages);
+
+
+    updatePagination(page, totalPages, category);
+
   } catch (error) {
     console.error("Error al obtener las noticias:", error);
   }
 };
+
+
+
