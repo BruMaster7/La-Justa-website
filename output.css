@@ -802,6 +802,10 @@ img {
   flex-direction: column;
 }
 
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -1022,7 +1026,7 @@ img {
 }
 
 #search-input {
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 #search-input.hidden {

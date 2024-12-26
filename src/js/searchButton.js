@@ -1,8 +1,23 @@
+import { fetchNews } from "./api/fetchNews.js";
+import { updatePagination, currentPage, setCurrentPage } from "./utils/pagination.js";
+import { renderNews } from "./components/renderNews.js";
+import { renderHero } from "./components/renderHero.js";
+
 const searchButton = document.getElementById("search-button");
 const searchInput = document.getElementById("search-input");
-const navMenu = document.getElementById("nav-menu");
-const menuButton = document.getElementById("menu-button");
-const closeMenuButton = document.getElementById("close-menu");
+let currentCategory = null;
+let currentTitle = '';
+
+const handleSearch = () => {
+  const query = searchInput.value.trim();
+  if (query) {
+    currentTitle = query;
+    setCurrentPage(1); 
+    fetchNews(currentPage, renderNews, renderHero, updatePagination, currentCategory, currentTitle);
+  }
+  searchInput.classList.remove("visible");
+  searchInput.classList.add("hidden");
+};
 
 // Control del buscador
 searchButton.addEventListener("click", (event) => {
@@ -12,25 +27,15 @@ searchButton.addEventListener("click", (event) => {
     searchInput.classList.add("visible");
     searchInput.focus();
   } else {
-    const query = searchInput.value.trim();
-    if (query) {
-      window.location.href = `http://127.0.0.1:8000/news?search=${encodeURIComponent(query)}`;
-    }
+    handleSearch();
     searchInput.classList.remove("visible");
     searchInput.classList.add("hidden");
   }
 });
 
-// Control del menú hamburguesa
-menuButton.addEventListener("click", () => {
-  navMenu.classList.add("open");
-  navMenu.classList.remove("hidden");
-  closeMenuButton.classList.remove("hidden");
-});
-
-// Control del botón de cierre
-closeMenuButton.addEventListener("click", () => {
-  navMenu.classList.remove("open");
-  navMenu.classList.add("hidden");
-  closeMenuButton.classList.add("hidden");
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    handleSearch();
+  }
 });

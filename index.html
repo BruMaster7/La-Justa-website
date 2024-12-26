@@ -37,25 +37,26 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-      
-          <a class="hover:text-gray-600 p-4 md:p-0" href="#">Salud</a>
-          <a class="hover:text-gray-600 p-4 md:p-0" href="#">Deportes</a>
-          <a class="hover:text-gray-600 p-4 md:p-0" href="#">Política</a>
-          <a class="hover:text-gray-600 p-4 md:p-0" href="#">Hoy</a>
-      
-          <!-- Buscador -->
-          <div id="search-container" class="relative flex items-center w-full md:w-auto md:ml-4">
-            <input
-              id="search-input"
-              type="text"
-              placeholder="Buscar noticias..."
-              class="hidden absolute right-0 md:static w-full md:w-64 py-2 px-4 border border-justa-grey rounded-full focus:outline-none focus:ring-2 focus:ring-justa-green text-justa-dark-blue"
-            />
-            <button id="search-button" class="text-justa-dark-blue focus:outline-none mx-auto md:mx-0">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19a8 8 0 100-16 8 8 0 000 16zM21 21l-4.35-4.35" />
-              </svg>
-            </button>
+          <div class="nav-container mt-5 flex flex-col-reverse md:mt-0 md:flex md:flex-row md:items-center md:space-x-8">
+            <a class="hover:text-gray-600 p-4 md:p-0" href="#">Salud</a>
+            <a class="hover:text-gray-600 p-4 md:p-0" href="#">Deportes</a>
+            <a class="hover:text-gray-600 p-4 md:p-0" href="#">Política</a>
+            <a class="hover:text-gray-600 p-4 md:p-0" href="#">Hoy</a>
+        
+            <!-- Buscador -->
+            <div id="search-container" class="relative flex items-center w-full md:w-auto md:ml-4">
+              <input
+                id="search-input"
+                type="text"
+                placeholder="Buscar noticias..."
+                class="hidden absolute right-0 md:static w-full md:w-64 py-2 px-4 border border-justa-grey rounded-full focus:outline-none focus:ring-2 focus:ring-justa-green text-justa-dark-blue"
+              />
+              <button id="search-button" class="text-justa-dark-blue focus:outline-none mx-auto md:mx-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19a8 8 0 100-16 8 8 0 000 16zM21 21l-4.35-4.35" />
+                </svg>
+              </button>
+            </div>
           </div>
         </nav>
       </header>
@@ -120,7 +121,7 @@
     <script type="module" src="/src/js/index.js"></script>
     <script type="module" src="/src/js/components/renderCategories.js"></script>
     <script src="/src/js/toggleMenu.js"></script>
-    <script src="/src/js/searchButton.js"></script>
+    <script type="module" src="/src/js/searchButton.js"></script>
     
 </body>
 </html>
