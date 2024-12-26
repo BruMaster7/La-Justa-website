@@ -45,4 +45,9 @@
       display: flex; /* En pantallas grandes, el menú siempre es visible */
     }
   }
+
+.img-avatar {
+    border-radius: 100%;
+    max-width: 50%;
+  }
   

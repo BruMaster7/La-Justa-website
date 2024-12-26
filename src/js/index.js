@@ -17,9 +17,25 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchNews(currentPage, renderNews, renderHero, updatePagination, currentCategory);
 });
 
+const categoryLinks = document.querySelectorAll('a[data-category]');
+
+categoryLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const target = link.getAttribute('data-category');
+    currentCategory = target;
+    fetchNews(1, renderNews, renderHero, updatePagination, currentCategory);
+    const newsSection = document.getElementById("news-container");
+    if (newsSection) {
+      newsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
 const changePage = (direction) => {
   fetchNews(currentPage, renderNews, renderHero, updatePagination, currentCategory, currentTitle);
 };
+
 
 
 

@@ -38,10 +38,9 @@
             </svg>
           </button>
           <div class="nav-container mt-5 flex flex-col-reverse md:mt-0 md:flex md:flex-row md:items-center md:space-x-8">
-            <a class="hover:text-gray-600 p-4 md:p-0" href="#">Salud</a>
-            <a class="hover:text-gray-600 p-4 md:p-0" href="#">Deportes</a>
-            <a class="hover:text-gray-600 p-4 md:p-0" href="#">Política</a>
-            <a class="hover:text-gray-600 p-4 md:p-0" href="#">Hoy</a>
+            <a class="hover:text-gray-600 p-4 md:p-0" href="#" data-category="Deportes">Deportes</a>
+            <a class="hover:text-gray-600 p-4 md:p-0" href="#" data-category="Política">Política</a>
+            <a class="hover:text-gray-600 p-4 md:p-0" href="src/html/nosotros.html">Nosotros</a>
         
             <!-- Buscador -->
             <div id="search-container" class="relative flex items-center w-full md:w-auto md:ml-4">
@@ -68,10 +67,10 @@
     <!-- Menú desplegable móvil -->
     <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
         <ul class="flex flex-col space-y-4 p-4 text-justa-dark-blue font-semibold text-lg">
-            <li><a class="hover:text-gray-600" href="#">Salud</a></li>
+            <li><a class="hover:text-gray-600 p-4 md:p-0" href="#" data-category="Deportes">Deportes</a></li>
             <li><a class="hover:text-gray-600" href="#">Deportes</a></li>
-            <li><a class="hover:text-gray-600" href="#">Política</a></li>
-            <li><a class="hover:text-gray-600" href="#">Hoy</a></li>
+            <li><a class="hover:text-gray-600 p-4 md:p-0" href="#" data-category="Política">Política</a></li>
+            <li><a class="hover:text-gray-600 p-4 md:p-0" href="src/html/nosotros.html">Nosotros</a></li>
         </ul>
     </nav>
 
@@ -113,9 +112,9 @@
           
     </main>
 
-    <footer class="bg-justa-dark-blue flex justify-center align-middle p-12 mt-8">
+    <footer class="bg-justa-dark-blue flex justify-center items-center align-middle p-12 mt-8">
         <img src="/src/assets/img/logo.png" alt="">
-        <h2 class="font-bold text-justa-white text-4xl mx-4 my-6">FOOTER</h2>
+        <h2 class="font-bold text-justa-white text-2xl mx-4 my-6">&copy; 2024 La Justa. Todos los derechos reservados.</h2>
     </footer>
 
     <script type="module" src="/src/js/index.js"></script>

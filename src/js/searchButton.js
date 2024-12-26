@@ -5,6 +5,8 @@ import { renderHero } from "./components/renderHero.js";
 
 const searchButton = document.getElementById("search-button");
 const searchInput = document.getElementById("search-input");
+const navMenu = document.getElementById("nav-menu");
+
 let currentCategory = null;
 let currentTitle = '';
 
@@ -12,11 +14,18 @@ const handleSearch = () => {
   const query = searchInput.value.trim();
   if (query) {
     currentTitle = query;
-    setCurrentPage(1); 
-    fetchNews(currentPage, renderNews, renderHero, updatePagination, currentCategory, currentTitle);
+    fetchNews(1, renderNews, renderHero, updatePagination, currentCategory, currentTitle);
   }
   searchInput.classList.remove("visible");
   searchInput.classList.add("hidden");
+
+  navMenu.classList.remove("open");
+  navMenu.classList.add("hidden");
+  closeMenuButton.classList.add("hidden");
+  const newsSection = document.getElementById("news-container");
+  if (newsSection) {
+    newsSection.scrollIntoView({ behavior: "smooth" });
+  }
 };
 
 // Control del buscador
