@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nosotros - La Justa</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" href="/output.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+<body class="font-Merriweather bg-justa-white">
+    <header class="flex justify-between items-center p-4 bg-white shadow-md relative">
+        <a href="/index.html" class="flex items-center">
+          <img class="h-16" src="/src/assets/img/logo-1Color.png" alt="logo-LaJusta">
+          <h1 class="font-black text-3xl text-justa-dark-blue ml-4">LA JUSTA</h1>
+        </a>
+    
+        <nav
+          class="md:flex md:flex-row md:items-center md:space-x-8 font-semibold text-justa-dark-blue text-xl absolute md:static top-0 left-0 w-full md:w-auto bg-white md:bg-transparent z-10 shadow md:shadow-none"
+        >
+
+          <div class="nav-container mt-5 flex flex-col-reverse md:mt-0 md:flex md:flex-row md:items-center md:space-x-8">
+            <a class="hover:text-gray-600 p-4 md:p-0" href="/index.html"><- Volver</a>
+          </div>
+
+        </nav>
+      </header>      
+      
+    <!-- Menú desplegable móvil -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <ul class="flex flex-col space-y-4 p-4 text-justa-dark-blue font-semibold text-lg">
+            <li><a class="hover:text-gray-600" href="#">Salud</a></li>
+            <li><a class="hover:text-gray-600" href="#">Deportes</a></li>
+            <li><a class="hover:text-gray-600" href="#">Política</a></li>
+            <li><a class="hover:text-gray-600" href="#">Hoy</a></li>
+        </ul>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <section class="text-center mt-10 mb-10">
+            <h2 class="font-extrabold text-4xl text-left md:text-center mt-28 md:mt-0 lg:mt-0 lg:text-left text-justa-dark-blue">
+                ¿Qué es "La Justa"?
+            </h2>
+            <p class="text-lg text-center md:text-left mt-5 text-gray-600">
+              "La Justa" es más que un portal de noticias, es una ventana hacia la información presentada de manera clara, directa y sincera. 
+              Su nombre juega con el modismo rioplatense "te canto la justa", una expresión que refleja honestidad y franqueza al compartir 
+              la verdad sin adornos. 
+              Aquí, cada noticia busca mantenerte informado con integridad, porque en "La Justa", nuestra misión es cantarte las cosas tal como son.
+            </p>
+        </section>
+    
+        <section class="flex flex-col justify-center items-center md:flex-row bg-white shadow-lg rounded-lg overflow-hidden p-8 mb-12">
+          <div class="flex items-center md:w-60 md:h-60 overflow-hidden mb-6 md:mb-0 md:mr-8">
+            <img src="/src/assets/img/logo-1Color.png" alt="Imagen de nosotros">
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">¿De dónde salen nuestras noticias?</h3>
+            <p class="text-gray-600 text-lg">
+              Esta plataforma combina el poder del scraping con un diseño limpio y eficiente. Mostramos noticias scrapeadas en tiempo real desde <span class="font-bold text-justa-dark-blue">Montevideo Portal</span>, <span class="font-bold text-justa-dark-blue">El País</span> y <span class="font-bold text-justa-dark-blue">Xataka</span>, demostrando cómo la automatización puede mejorar la experiencia de acceso a información.
+            </p>
+          </div>
+        </section>
+    
+        <!-- Features Section -->
+        <section class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="bg-white shadow-lg rounded-lg p-6 m-auto w-full">
+            <h4 class="text-xl font-bold text-gray-800 mb-4 text-center lg:text-left">STACK WEB:</h4>
+            <p class="text-gray-600">
+              <div class="flex flex-col lg:flex-row gap-1 max-w-40 m-auto lg:justify-center">
+                <img src="https://img.shields.io/badge/-MongoDB-47A248?logo=mongodb&logoColor=white&style=for-the-badge" alt="MongoDB"> 
+                <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge" alt="JavaScript"> 
+                <img src="https://img.shields.io/badge/-TailwindCSS-06B6D4?logo=tailwindcss&logoColor=white&style=for-the-badge" alt="TailwindCSS"> 
+              </div>
+            </p>
+          </div>
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <h4 class="text-xl font-bold text-gray-800 mb-4">La API detrás del proyecto</h4>
+            <p class="text-gray-600">
+              La API <span class="font-bold text-justa-dark-blue">NotiScraperAPI</span>, alojada en <span class="italic">GitHub</span>, combina <span class="font-bold">Python</span>, <span class="font-bold">FastAPI</span>, <span class="font-bold text-green-500">MongoDB</span> y <span class="font-bold">Rye</span> para el manejo de dependencias. Una solución robusta para scraping, almacenamiento y entrega de datos.
+            </p>
+            <button type="button" 
+                  class="m-auto flex justify-center items-center focus:outline-none text-justa-white font-bold text-sm bg-justa-green hover:bg-green-800 
+                         focus:ring-4 rounded-full focus:ring-green-300 px-5 py-2.5 me-2 mb-2 my-3">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="Github logo" class="w-8 mr-3">
+              <a href="https://github.com/BruMaster7/Noti-ScraperAPI" target="_blank">Explorar en GitHub</a>         
+            </button>
+          </div>
+        </section>
+    
+        <section class="text-center bg-white shadow-lg rounded-lg p-8 mt-12">
+          <h4 class="text-2xl font-semibold text-gray-800 mb-4">Sobre el creador</h4>
+          <div class="flex flex-col md:flex-row gap-10 items-center">
+            <div class="h-40 max-w-64  md:w-full md:h-60 rounded-full lg:rounded-3xl overflow-hidden shadow-md mb-6 md:mb-0 md:mr-8">
+              <img src="/src/assets/img/avatar-creador.jpeg" alt="Imagen de nosotros" class="w-full h-full object-cover">
+            </div>
+            <p class="text-gray-600 text-lg md:text-left lg:max-w-4xl">
+              Mi nombre es Bruno, soy estudiante de profesorado de Informática, y actualmente
+              trabajo como profesor en Uruguay, haciendo la práctica final de la carrera.
+              Soy apasionado a la programación, y "La Justa" no es más que un proyecto que me sirve como "excusa"
+              para mostrar algunas de mis cualidades como programador. Si de paso el proyecto te es funcional para poder informarte
+              sobre lo que sucede en mi país, o en el mundo, ¡Adelante!
+              </br>Este proyecto refleja mis habilidades en scraping, desarrollo de APIs y diseño frontend.
+            </p>
+        </div>
+        </section>
+      </main>
+    
+
+      <footer class="bg-justa-dark-blue flex justify-center items-center align-middle p-12 mt-8">
+        <img src="/src/assets/img/logo.png" alt="">
+        <h2 class="font-bold text-justa-white text-2xl mx-4 my-6">&copy; 2024 La Justa. Todos los derechos reservados.</h2>
+    </footer>
+    </body>
+    <script src="/src/js/toggleMenu.js"></script>
+    <script type="module" src="/src/js/searchButton.js"></script>
+</body>
+</html>
