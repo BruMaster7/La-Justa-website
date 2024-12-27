@@ -2,6 +2,7 @@ import { fetchNews } from "../api/fetchNews.js";
 import { renderHero } from "./renderHero.js";
 import { renderNews } from "./renderNews.js";
 import { updatePagination } from "../utils/pagination.js";
+import { updateURLParams } from "../utils/updateURLParams.js";
 
 export const renderCategories = (categories) => {
   if (Array.isArray(categories)) {
@@ -31,6 +32,7 @@ document.addEventListener("click", (event) => {
   const target = event.target.closest("button[data-category]");
   if (target) {
     const category = target.getAttribute("data-category");
+    updateURLParams(1, category, "");
     fetchNews(1, renderNews, renderHero, updatePagination, category);
     const newsSection = document.getElementById("news-container");
     if (newsSection) {

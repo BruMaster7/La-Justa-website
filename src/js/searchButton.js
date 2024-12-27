@@ -1,5 +1,6 @@
 import { fetchNews } from "./api/fetchNews.js";
-import { updatePagination, currentPage, setCurrentPage } from "./utils/pagination.js";
+import { updatePagination, currentPage } from "./utils/pagination.js";
+import { updateURLParams } from "./utils/updateURLParams.js";
 import { renderNews } from "./components/renderNews.js";
 import { renderHero } from "./components/renderHero.js";
 
@@ -14,6 +15,7 @@ const handleSearch = () => {
   const query = searchInput.value.trim();
   if (query) {
     currentTitle = query;
+    updateURLParams(1, null, currentTitle);
     fetchNews(1, renderNews, renderHero, updatePagination, currentCategory, currentTitle);
   }
   searchInput.classList.remove("visible");
