@@ -14,8 +14,10 @@ export const renderHero = (newsArray) => {
             <div id="categories-container">${renderCategories(randomNews.category)}</div>
         </div>
         <div class="hero-new max-w-screen-md mt-5">
+         <a href="${randomNews.url}" target="_blank">
           <h3 class="text-4xl font-bold text-white">${randomNews.title}</h3>
           <p class="text-xl text-white mt-3">${randomNews.header || "Sin descripción."}</p>
+          </a>
           <a href="${getLink(randomNews.web)}" target="_blank">
             <div class="portal-extracted flex items-center mt-4">
               <img class="h-14 rounded-3xl" src="${getLogo(randomNews.web)}" alt="Logo ${randomNews.web}">

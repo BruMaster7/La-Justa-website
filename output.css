@@ -698,6 +698,10 @@ img {
   margin-left: 1rem;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -732,10 +736,6 @@ img {
 
 .mt-96 {
   margin-top: 24rem;
-}
-
-.ml-auto {
-  margin-left: auto;
 }
 
 .block {
@@ -852,10 +852,6 @@ img {
 
 .items-center {
   align-items: center;
-}
-
-.justify-end {
-  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1029,14 +1025,6 @@ img {
 
 .text-center {
   text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-end {
-  text-align: end;
 }
 
 .align-middle {
