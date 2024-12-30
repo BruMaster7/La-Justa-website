@@ -12,12 +12,12 @@ export const renderNews = (newsArray) => {
         <img src="${news.img}" alt="${news.header}" class="w-full h-auto">
         <div class="p-4">
           <div id="categories-container">${renderCategories(news.category)}</div>
-          <h3 class="text-xl font-bold">${news.title}</h3>
-          <p>${news.text}</p>
+          <a href="${news.url}" target="_blank"> <h3 class="text-xl font-bold">${news.title}</h3> </a>
           <a href="${getLink(news.web)}" target="_blank">
             <div class="flex items-center mt-4">
               <img class="h-10 rounded-3xl" src="${getLogo(news.web)}" alt="Logo ${news.web}">
               <p class="ml-3 text-lg">${news.web}</p>
+              <p class="ml-auto text-lg "> ${news.date} </p>
             </div>
           </a>
         </div>
