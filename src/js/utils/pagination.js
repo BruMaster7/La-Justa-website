@@ -2,6 +2,7 @@ import { fetchNews } from "../api/fetchNews.js";
 import { renderNews } from "../components/renderNews.js";
 import { renderHero } from "../components/renderHero.js";
 import { updateURLParams } from "./updateURLParams.js";
+import { scrollToNewsSection } from "./sectionScroll.js";
 
 export let currentPage = 1;
 export let totalPages = 1;
@@ -35,8 +36,10 @@ export const updatePagination = (currentPage, totalPages, category = null, title
 export const changePage = (direction, category = null, title = '') => {
   if (direction === "next" && currentPage < totalPages) {
     currentPage++;
+    scrollToNewsSection("news-container");
   } else if (direction === "prev" && currentPage > 1) {
     currentPage--;
+    scrollToNewsSection("news-container");
   }
 
   updateURLParams(currentPage, category, title);

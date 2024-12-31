@@ -1,6 +1,7 @@
 import { renderCategories } from "./renderCategories.js";
 import { getLogo } from "../utils/getLogo.js";
 import {getLink} from "../utils/getLink.js"
+import { formatISODate } from "../utils/formatISODate.js";
 
 export const renderNews = (newsArray) => {
   const newsContainer = document.getElementById("news-container");
@@ -17,7 +18,7 @@ export const renderNews = (newsArray) => {
             <div class="flex items-center mt-4">
               <img class="h-10 rounded-3xl" src="${getLogo(news.web)}" alt="Logo ${news.web}">
               <p class="ml-3 text-lg">${news.web}</p>
-              <p class="ml-auto text-lg "> ${news.date} </p>
+              <p class="ml-auto text-lg "> ${formatISODate(news.date)} </p>
             </div>
           </a>
         </div>

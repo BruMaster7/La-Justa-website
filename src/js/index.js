@@ -44,7 +44,7 @@ categoryLinks.forEach((link) => {
   });
 });
 
-const changePage = (direction) => {
+const changePage = () => {
   //updateURLParams(currentPage, currentCategory, currentTitle);
   fetchNews(currentPage, renderNews, renderHero, updatePagination, currentCategory, currentTitle);
 };

@@ -1,6 +1,7 @@
 import { getLogo } from "../utils/getLogo.js";
 import {getLink} from "../utils/getLink.js"
 import { renderCategories } from "./renderCategories.js";
+import { formatISODate } from "../utils/formatISODate.js";
 
 export const renderHero = (newsArray) => {
   const randomNews = newsArray[Math.floor(Math.random() * newsArray.length)];
@@ -22,6 +23,7 @@ export const renderHero = (newsArray) => {
             <div class="portal-extracted flex items-center mt-4">
               <img class="h-14 rounded-3xl" src="${getLogo(randomNews.web)}" alt="Logo ${randomNews.web}">
               <p class="ml-3 text-lg text-white">${randomNews.web}</p>
+              <p class="ml-auto text-lg text-white"> ${formatISODate(randomNews.date)} </p>
             </div>
           </a>
         </div>

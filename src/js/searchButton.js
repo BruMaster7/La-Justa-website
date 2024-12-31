@@ -1,8 +1,9 @@
 import { fetchNews } from "./api/fetchNews.js";
-import { updatePagination, currentPage } from "./utils/pagination.js";
+import { updatePagination } from "./utils/pagination.js";
 import { updateURLParams } from "./utils/updateURLParams.js";
 import { renderNews } from "./components/renderNews.js";
 import { renderHero } from "./components/renderHero.js";
+import { scrollToNewsSection } from "./utils/sectionScroll.js";
 
 const searchButton = document.getElementById("search-button");
 const searchInput = document.getElementById("search-input");
@@ -23,11 +24,9 @@ const handleSearch = () => {
 
   navMenu.classList.remove("open");
   navMenu.classList.add("hidden");
+  // eslint-disable-next-line no-undef
   closeMenuButton.classList.add("hidden");
-  const newsSection = document.getElementById("news-container");
-  if (newsSection) {
-    newsSection.scrollIntoView({ behavior: "smooth" });
-  }
+  scrollToNewsSection("news-container");
 };
 
 // Control del buscador
