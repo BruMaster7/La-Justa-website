@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Justa</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="font-Merriweather bg-justa-white">
+
+    <header class="flex justify-between items-center p-4 bg-white shadow-md relative">
+        <!-- Logo -->
+        <a href="../index.html" class="flex items-center">
+          <img class="h-16" src="/src/assets/img/logo-1Color.png" alt="logo-LaJusta">
+          <h1 class="font-black text-3xl text-justa-dark-blue ml-4">LA JUSTA</h1>
+        </a>
+      
+        <!-- Hamburguesa para móviles -->
+        <button id="menu-button" class="block md:hidden text-justa-dark-blue focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      
+        <!-- Menú de navegación -->
+        <nav
+          id="nav-menu"
+          class="hidden md:flex md:flex-row md:items-center md:space-x-8 font-semibold text-justa-dark-blue text-xl absolute md:static top-0 left-0 w-full md:w-auto bg-white md:bg-transparent z-10 shadow md:shadow-none"
+        >
+          <!-- Botón de cierre para móviles -->
+          <button id="close-menu" class="self-end text-justa-dark-blue focus:outline-none m-4 hidden md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <div class="nav-container mt-5 flex flex-col-reverse md:mt-0 md:flex md:flex-row md:items-center md:space-x-8">
+            <a class="hover:text-gray-600 p-4 md:p-0" href="#" data-category="Deportes">Deportes</a>
+            <a class="hover:text-gray-600 p-4 md:p-0" href="#" data-category="Política">Política</a>
+            <a class="hover:text-gray-600 p-4 md:p-0" href="src/html/nosotros.html">Nosotros</a>
+        
+            <!-- Buscador -->
+            <div id="search-container" class="relative flex items-center w-full md:w-auto md:ml-4">
+              <input
+                id="search-input"
+                type="text"
+                placeholder="Buscar noticias..."
+                class="hidden absolute right-0 md:static w-full md:w-64 py-2 px-4 border border-justa-grey rounded-full focus:outline-none focus:ring-2 focus:ring-justa-green text-justa-dark-blue"
+              />
+              <button id="search-button" class="text-justa-dark-blue focus:outline-none mx-auto md:mx-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19a8 8 0 100-16 8 8 0 000 16zM21 21l-4.35-4.35" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+      
+      
+      
+      
+      
+    <!-- Menú desplegable móvil -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <ul class="flex flex-col space-y-4 p-4 text-justa-dark-blue font-semibold text-lg">
+            <li><a class="hover:text-gray-600 p-4 md:p-0" href="#" data-category="Deportes">Deportes</a></li>
+            <li><a class="hover:text-gray-600" href="#">Deportes</a></li>
+            <li><a class="hover:text-gray-600 p-4 md:p-0" href="#" data-category="Política">Política</a></li>
+            <li><a class="hover:text-gray-600 p-4 md:p-0" href="src/html/nosotros.html">Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero bg-justa-dark-blue w-full h-h-hero">
+        <div class="hero-container hero-bg w-full h-full bg-no-repeat bg-cover bg-bottom">        
+
+        </div>
+    </div>
+    <main class="container mx-auto max-w-5xl mt-96 md:mt-48 lg:mt-44">
+        <div class="flex flex-col">
+            <div class="space mt-10 md:mt-0 lg:mt-0"></div>
+        </div>
+        <h2 class="font-extrabold text-4xl text-center mt-28 md:mt-0 lg:mt-0 lg:text-left text-justa-dark-blue">Últimas Noticias</h2>
+
+        <section class="new-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mx-5 lg:mx-0" id="news-container">
+
+        </section>
+
+        <section class="references max-w-full mt-10">
+            <h2 class="font-extrabold text-4xl text-center text-justa-dark-blue">Diarios que Recopilamos</h2>
+            <div class="flex flex-wrap lg:flex-nowrap flex-row justify-center items-center mt-5 mb-10 gap-5 max-w-full">
+                <img src="/src/assets/img/Montevideo-portal-reference.png" alt="Montevideo Porta">
+                <img src="/src/assets/img/El-Pais-logo-reference.png" alt="El Pais">
+                <img src="/src/assets/img/Xataka-logo-reference.png" alt="Xataka">
+            </div>
+
+
+        </section>
+
+        <div id="pagination-container" class="flex justify-center mt-8 space-x-2">
+            <button id="prev-page" class="px-4 py-2 bg-justa-dark-blue text-white rounded-md hover:bg-justa-green focus:outline-none disabled:opacity-50" disabled>
+              Anterior
+            </button>
+            <span id="page-number" class="px-4 py-2 text-lg font-semibold">1</span>
+            <button id="next-page" class="px-4 py-2 bg-justa-dark-blue text-white rounded-md hover:bg-justa-green disabled:opacity-50 focus:outline-none">
+              Siguiente
+            </button>
+          </div>
+          
+    </main>
+
+    <footer class="bg-justa-dark-blue flex justify-center items-center align-middle p-12 mt-8">
+        <img src="/src/assets/img/logo.png" alt="">
+        <h2 class="font-bold text-justa-white text-2xl mx-4 my-6">&copy; 2024 La Justa. Todos los derechos reservados.</h2>
+    </footer>
+
+    <script type="module" src="/src/js/index.js"></script>
+    <script type="module" src="/src/js/components/renderCategories.js"></script>
+    <script src="/src/js/toggleMenu.js"></script>
+    <script type="module" src="/src/js/searchButton.js"></script>
+    
+</body>
+</html>
