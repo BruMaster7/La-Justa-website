@@ -5,7 +5,7 @@ export const fetchNews = async (page, renderNews, renderHero, updatePagination, 
     const categoryParam = category ? `&category=${encodeURIComponent(category)}` : '';
     const titleParam = title ? `&title=${encodeURIComponent(title)}` : '';
     
-    const response = await fetch(`http://127.0.0.1:8000/news?page=${page}${categoryParam}${titleParam}`);
+    const response = await fetch(`https://noti-scraperapi.onrender.com/news?page=${page}${categoryParam}${titleParam}`);
     const data = await response.json();
 
     setTotalPages(data.pagination.total_pages);
